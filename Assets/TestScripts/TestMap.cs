@@ -281,7 +281,6 @@ public class TestMap : MonoBehaviour
 
 
 
-
     }
 
     public void manipulationTransformedHandler(object sender, System.EventArgs e)
@@ -301,6 +300,8 @@ public class TestMap : MonoBehaviour
             }
 
             CameraZoom = Camera.main.transform.position.y;
+
+            Camera.main.transform.RotateAround(Vector3.zero, Vector3.up, ManipulationGesture.DeltaRotation);
 
             //Debug.Log(CameraZoom);
         }
